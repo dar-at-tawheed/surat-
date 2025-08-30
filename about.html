@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title> ROMANA GLOBAL </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/LOGOOO.png" rel="icon">
+  <link href="" rel=>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Append
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+  
+
+
+ .navmenu {
+      margin: 0 auto;
+      /* Center horizontally */
+    }
+
+    .navmenu ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      padding: 8px 12px;
+    }
+
+    /* Mobile menu */
+    @media (max-width: 1100px) {
+      .navmenu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .navmenu ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .navmenu.active {
+        display: block;
+      }
+
+      .mobile-nav-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        margin-left: auto;
+      }
+    }
+
+    /* Desktop: toggle hidden */
+    @media (min-width: 1100px) {
+      .mobile-nav-toggle {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .mobile-nav-toggle {
+        display: block;
+        position: relative;
+        z-index: 1100;
+        /* image ke upar rahe */
+        font-size: 28px;
+        cursor: pointer;
+        margin-left: auto;
+        /* right side pe push karega */
+        color: #000;
+        /* white bg pe black, dark bg pe white use karna */
+      }
+
+      .navmenu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        /* header ke neeche */
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 15px;
+        text-align: center;
+        z-index: 999;
+      }
+
+      .navmenu.active {
+        display: block;
+      }
+    }
+
+
+
+
+/* Cards below */
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #f9fbfd;
+}
+
+.card {
+  background: #fff;
+  width: 300px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  border-top: 30px solid rgb(206, 200, 212);
+   border-bottom: 10px solid rgb(206, 200, 212);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color:  rgb(139, 31, 240);
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .about-content {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .about-content h1 {
+    font-size: 34px;
+  }
+}
+
+.why-choose-us {
+  background: #f5e9db;
+  padding: 60px 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.left img {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 8px;
+}
+
+.right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.right h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.right .subheading {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.accordion-item {
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  cursor: pointer;
+  position: relative;
+  transition: 10.3s;
+}
+
+.accordion-item h3 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.accordion-item p {
+  font-size: 14px;
+  margin-top: 8px;
+  display: none;
+  color: #333;
+
+}
+
+
+
+.accordion-item.active p {
+  display: block;
+}
+
+.accordion-item::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #aaa;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.accordion-item.active::after {
+  background: red;
+}
+
+
+
+  </style>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo.png" alt="Dar at Tawheed" style="margin-left: 50PX;">
+      </a>
+
+      <!-- Mobile nav toggle -->
+      <div class="mobile-nav-toggle" id="mobile-toggle">☰</div>
+
+      <!-- Navbar -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html"class="active">About</a></li>
+          <li class="dropdown">
+            <a href="books.html"><span>Books</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="Brochures.html">Brochures</a></li>
+              <li><a href="Dar at Tawheed Publications.html">Dar at Tawheed Publications</a></li>
+              <li><a href="OtherBooks.html">Other Books</a></li>
+            </ul>
+          </li>
+          <li><a href="contect.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+<section id="stats" class="stats section dark-background" style="max-height: 50vh;">
+  <img src="assets/img/aa.jpg" alt="" data-aos="fade-in">
+  <div class="container">
+    <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-10">
+        <div class="text-center">
+          <h2 id="cc"> About Us </h2>
+          <h4>Who We Are</h4>
+          <p>
+            Dar at Tawheed ek Islami markaz hai jo taleem, ilm aur hidayat ko 
+            aam karne ke liye kitaabein aur brochures chap kar logon tak pohchata hai.
+            Yahan aapko Islami taleemaat par mabni asli aur mufeed kitaabein milengi,
+            jo roohaniyat, ibadat aur insaniyat ke behtareen pehlu samjhati hain.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Stats Section -->
+
+<!-- Info Cards -->
+<section>
+  <div class="about-cards" class="card" data-aos="fade-up" data-aos-delay="100">
+    <div class="card">
+      <h3 style="color: rgb(47, 113, 112);">Our Purpose</h3>
+      <p>
+        Hamara maqsad hai ke har ghar tak deen ki roshni aur sahih ilm pohche. 
+        Dar at Tawheed ki zyadatar kitaabein mashhoor Islami aalim 
+        <strong>Sheikh Irfan Surti</strong> sahab ki tasneefaat hain, 
+        jo aam logon ke liye asaan zubaan me samajhne layak hoti hain.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 style="color: rgb(47, 113, 112);">Our Mission</h3>
+      <p>
+        Humari mission yeh hai ke asli aur authentic Islami kitaabein 
+        logon tak qeemat par available ho jayein. Is ke liye hum 
+        All India courier service ke zariye har jagah kitaabein bhejte hain.  
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 style="color: rgb(47, 113, 112);">Our Vision</h3>
+      <p>
+        Hum yeh chahte hain ke har shakhs apni zindagi ko deen ki roshni 
+        se roshan kare, aur har ghar tak Qur’an aur Sunnat ka paighaam 
+        pohche. 
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="why-choose-us" class="card" data-aos="fade-up" data-aos-delay="100">
+  <div class="container">
+    <div class="row">
+     
+      <div class="right">
+        <h2 style="color: rgb(47, 113, 112);">Why Choose Us?</h2>
+        <p class="subheading">Spreading Ilm • Iman • Hidaya</p>
+        <div class="accordion">
+
+          <div class="accordion-item active">
+            <h3 style="color: rgb(47, 113, 112);">Authentic Publications</h3>
+            <p>
+              Dar at Tawheed ki zyadatar kitaabein mashhoor Islami aalim 
+              <strong>Sheikh Irfan Surti</strong> sahab ki tasneefaat hain, 
+              jo sahih ilm aur roohaniyat ka paighaam pohchati hain.
+            </p>
+          </div>
+
+          <div class="accordion-item">
+            <h3 style="color: rgb(47, 113, 112);">Diverse Collection</h3>
+            <p>
+              Yahan Qur’an, Hadees, Ibadat, Roohaniyat aur insaniyat se mutaliq 
+              mukhtalif Islami kitaabein dastiyab hain.
+            </p>
+          </div>
+
+          <div class="accordion-item">
+            <h3 style="color: rgb(47, 113, 112);">Affordable Pricing</h3>
+            <p>
+              Har kitaab ki apni alag qeemat hoti hai, taake har shakhs 
+              apni zarurat ke mutabiq ilm hasil kar sake.
+            </p>
+          </div>
+
+          <div class="accordion-item">
+            <h3 style="color: rgb(47, 113, 112);">All India Delivery</h3>
+            <p>
+              Humari kitaabein All India courier service ke zariye 
+              aapke ghar tak pohchai jaati hain.
+            </p>
+          </div>
+
+          <div class="accordion-item">
+            <h3 style="color: rgb(47, 113, 112);">Dedicated Support</h3>
+            <p>
+              Humari team hamesha madad aur rehnumai ke liye dastiyab hai, 
+              taake aapko sahi kitaab hasil karne me aasani ho.
+            </p>
+          </div>
+
+          <div class="accordion-item">
+            <h3 style="color: rgb(47, 113, 112);">Our Commitment</h3>
+            <p>
+              Hamara junoon yeh hai ke har ghar tak deen ki roshni pohche, 
+              aur har insaan apni zindagi ko Qur’an aur Sunnat ke mutabiq 
+              guzarne ki koshish kare.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+     <footer id="footer" class="footer position-relative" style="background-color: #333; color: white;">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      
+      <!-- About Section -->
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename" style="color: rgb(236, 213, 161);">DAR AT TAWHEED</span>
+        </a>
+        <p>
+          Dar at Tawheed ek Islami markaz hai jo Qur’an, Hadees aur authentic Islami 
+          kitaabon ko chap kar aur brochures ke zariye logon tak pohchata hai. 
+          Hamara maqsad ilm, imaan aur hidayat ko aam karna hai.
+        </p>
+        <div class="social-links d-flex mt-4">
+          <a href="https://www.facebook.com/share/178BNYaxsA/" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/dar_at_tawheed/?igsh=MXU2Y3Y2aWh5bWRvNQ%3D%3D#" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4 style="color: rgb(236, 213, 161);">Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="contect.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4 style="color: rgb(236, 213, 161);">Contact Us</h4>
+        <p>Dar at Tawheed</p>
+        <p>Surat, Gujrat, India</p>
+        <p class="mt-4"><strong>Phone:</strong> <span>+91 95100 20806</span></p>
+        <p><strong>Email:</strong> <span>darattawheed2025@gmail.com</span></p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-lg-4 col-md-12 footer-newsletter">
+        <h4 style="color: rgb(236, 213, 161);">Sign Up for Updates</h4>
+        <form action="https://formspree.io/f/xblagedy" method="POST" class="signup-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <button type="submit" style="color: rgb(47, 113, 112);">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="container copyright text-center mt-4">
+    <div class="credits">
+      Designed by <a href="https://abdulhaigawai.github.io/Abdulhaigawai-s-Professional-Profile/" style="color: rgb(47, 113, 112);" target="_blank">Abdul Hai Gawai</a>
+    </div>
+  </div>
+
+</footer>
+
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+   <script>
+  const items = document.querySelectorAll(".accordion-item");
+  items.forEach(item => {
+    item.addEventListener("click", () => {
+      items.forEach(i => i.classList.remove("active"));
+      item.classList.add("active");
+    });
+  });
+</script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration in ms
+    once: true      // animation happens only once
+  });
+</script>
+
+</body>
+
+</html>

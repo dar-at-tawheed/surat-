@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title> ROMANA GLOBAL </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/LOGOOO.png" rel="icon">
+    <link href="" rel=>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Append
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <style>
+        /* General header styles */
+        /* General header styles */
+        /* ======================
+   HEADER BASE STYLE
+====================== */
+        .navmenu {
+            margin: 0 auto;
+            /* Center horizontally */
+        }
+
+        .navmenu ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navmenu ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            padding: 8px 12px;
+        }
+
+        /* Mobile menu */
+        @media (max-width: 1100px) {
+            .navmenu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 15px;
+                text-align: center;
+            }
+
+            .navmenu ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .navmenu.active {
+                display: block;
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+                font-size: 28px;
+                cursor: pointer;
+                margin-left: auto;
+            }
+        }
+
+        /* Desktop: toggle hidden */
+        @media (min-width: 1100px) {
+            .mobile-nav-toggle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .mobile-nav-toggle {
+                display: block;
+                position: relative;
+                z-index: 1100;
+                /* image ke upar rahe */
+                font-size: 28px;
+                cursor: pointer;
+                margin-left: auto;
+                /* right side pe push karega */
+                color: #000;
+                /* white bg pe black, dark bg pe white use karna */
+            }
+
+            .navmenu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                /* header ke neeche */
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 15px;
+                text-align: center;
+                z-index: 999;
+            }
+
+            .navmenu.active {
+                display: block;
+            }
+        }
+
+
+        #stats {
+            position: relative;
+            padding: 140px 20px 100px;
+            /* 140px top padding for navbar space */
+            text-align: center;
+            color: white;
+            max-height: 50vh;
+            overflow: hidden;
+        }
+
+        /* Background image */
+        #stats img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+
+        }
+
+        /* Overlay effect */
+        #stats::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            /* dark overlay */
+            z-index: 2;
+        }
+
+        /* Content styling */
+        #stats .container {
+            position: relative;
+            z-index: 3;
+        }
+
+        #stats h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .product-grid-section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        /* 1. Last product container ka bottom margin hatao */
+        .product-grid-section .container:last-child {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        /* 2. Parent section me unnecessary height disable karo */
+        .product-grid-section {
+            min-height: auto !important;
+            height: auto !important;
+            padding-bottom: 0rem;
+            /* footer se thoda gap bas */
+        }
+
+        /* 3. Footer se upar gap control */
+        footer {
+            margin-top: 0 !important;
+        }
+    </style>
+
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <img src="assets/img/logo.png" alt="Dar at Tawheed" style="margin-left: 50PX;">
+            </a>
+
+            <!-- Mobile nav toggle -->
+            <div class="mobile-nav-toggle" id="mobile-toggle">☰</div>
+
+            <!-- Navbar -->
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="books.html" class="active"><span>Books</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="Brochures.html">Brochures</a></li>
+                            <li><a href="Dar at Tawheed Publications.html">Dar at Tawheed Publications</a></li>
+                            <li><a href="OtherBooks.html">Other Books</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contect.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <section id="stats" class="stats section dark-background">
+
+        <img src="assets/img/AREA.jpg" alt="" data-aos="fade-in">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-xl-10">
+                    <div class="text-center">
+
+
+                        <h2 id="cc">OTHER PUBLICATIONS ( books )​</h2>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" class="recent-posts section" style="background-color:#f5e9db;" class="card"
+        data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Section Title -->
+        <div class="container">
+            <h2
+                style="color: rgb(47, 113, 112); text-align: center; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">
+                DAR AT TAWHEED – SPREADING ILM & HIDAYAH
+            </h2>
+            <p style="text-align: center;">
+                Dar at Tawheed ek Islami markaz hai jo Qur’an, Hadees aur authentic Islami kitaabon ke zariye
+                ilm, imaan aur hidayat ko aam karne ka kaam karta hai. <br>
+                Yahan chapayi gayi kitaabein aur brochures mukhtalif maqasid ke liye logon tak pohchaye jaate hain.
+            </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container product-grid-section mb-5">
+            <div class="card p-3 shadow-sm border-0 rounded-4">
+                <div class="row align-items-center">
+
+                    <!-- Left: Text/Contact -->
+                    <div class="col-md-6 order-2 order-md-1">
+                        <div class="content text-md-start text-center p-3">
+                            <h3 class="fw-bold mb-3 text-success-emphasis">Fath-ur-Rahman ir-Raheem fi Tafsir al-Qur’an al-Kareem”</h3>
+
+                            <ul class="list-unstyled fw-semibold">
+                                <li>Ye kitaab Molana A. Raheem Limbada Hafizahullah ke UK me diye gaye Qur’an ke dars ka majmua hai.</li>
+                                <li>Dars-e-Qur’an ko jama karke ek kitaab ki shakal di gayi hai taake log asaani se faida utha saken.</li>
+                                <li>Abhi isme sirf 30wa Para (Amma Juz) shamil hai.Baqi pareh jaise-jaise dars hote rahenge, waise-waise is kitaab me shamil kiye jaayenge.</li>
+                                <li>Yeh kitaab talaba, ulama aur aam logo ke liye mufeed hai. </li>
+                                <li>Asal maqsad hai Qur’an ka paigham samajhna aur us par amal karna.</li>
+                            </ul>
+
+                            <p class="fw-semibold mb-1">Page : 1340</p>
+                          <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹1600</span>
+  <span style="color: green; margin-left: 10px;">₹950</span>
+
+                           <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+
+                        </div>
+                    </div>
+
+
+                    <!-- Right: Image -->
+                    <div class="col-md-6 order-1 order-md-2 text-center">
+                        <img src="assets/img/Fath -.png" alt="Aadaat o Atwaar-e-Nabi ﷺ"
+                            class="img-fluid rounded" style="max-width:350px;">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section Title -->
+
+
+
+            <div class="row gy-3 product-grid-section">
+                <div class="container mb-5">
+                    <div class="card p-3 shadow-sm border-0 rounded-4">
+                        <div class="row align-items-center">
+
+                            <!-- Left: Text / Contact -->
+                            <div class="col-md-6 order-2 order-md-1">
+                                <div class="content text-md-start text-center p-3">
+                                    <h3 class="fw-bold mb-3 text-success-emphasis">
+                                      Tazkirah Hazrat Aqdas Maulana Muhammad Ikram Ali Sahib Bhagalpuriؒ”
+                                    </h3>
+
+                                    <ul class="list-unstyled fw-semibold mb-3">
+                                        <li>Seerat-e-Shakhsiyat</li>
+                                        <li>Ilmi o Deeni Khidmat</li>
+                                        <li>Talim o Tarbiyat</li>
+                                        <li>Fazail aur Karamaat</li>
+                                        <li>Unka paigham</li>
+                                      
+                                    </ul>
+
+                                    <p class="fw-semibold mb-1">Page : 512</p>
+                                    <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹350</span>
+  <span style="color: green; margin-left: 10px;">₹200</span>
+</p>
+
+                                    <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                </div>
+                            </div>
+
+                            <!-- Right: Image -->
+                            <div class="col-md-6 order-1 order-md-2 text-center">
+                                <img src="assets/img/tazkirah1.png" alt="Hulye Mubarakah aur Malbusaate Nabviyya"
+                                    class="img-fluid rounded" style="max-width:350px;">
+                            </div>
+                        </div>
+                    </div>
+                      <div class="row gy-3 product-grid-section">
+                <div class="container mb-5">
+                    <div class="card p-3 shadow-sm border-0 rounded-4">
+                        <div class="row align-items-center">
+
+                            <!-- Left: Text / Contact -->
+                            <div class="col-md-6 order-2 order-md-1">
+                                <div class="content text-md-start text-center p-3">
+                                    <h3 class="fw-bold mb-3 text-success-emphasis">
+                                     Tazkirah Hazrat Aqdas Maulana Muhammad Ayub Sahib A‘zamiؒ
+                                    </h3>
+
+                                    <ul class="list-unstyled fw-semibold mb-3">
+                                        <li>Seerat-e-Shakhsiyat</li>
+                                        <li>Ilmi o Deeni Khidmat</li>
+                                        <li>Talim o Tarbiyat</li>
+                                        <li>Fazail aur Karamaat</li>
+                                        <li>Unka paigham</li>
+                                      
+                                    </ul>
+
+                                    <p class="fw-semibold mb-1">Page : 320</p>
+                                   <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹250</span>
+  <span style="color: green; margin-left: 10px;">₹130</span>
+
+                                    <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                </div>
+                            </div>
+
+                            <!-- Right: Image -->
+                            <div class="col-md-6 order-1 order-md-2 text-center">
+                                <img src="assets/img/Tazkirah -.png" alt="Hulye Mubarakah aur Malbusaate Nabviyya"
+                                    class="img-fluid rounded" style="max-width:350px;">
+                            </div>
+                        </div>
+                    </div>
+
+   <div class="row gy-3 product-grid-section">
+                <div class="container mb-5">
+                    <div class="card p-3 shadow-sm border-0 rounded-4">
+                        <div class="row align-items-center">
+
+                            <!-- Left: Text / Contact -->
+                            <div class="col-md-6 order-2 order-md-1">
+                                <div class="content text-md-start text-center p-3">
+                                    <h3 class="fw-bold mb-3 text-success-emphasis">
+                                    Hazrat Maulana Rasheed Ahmad Sahib Silodiؒ ,<br>Kuch Muntashir Yaadein
+                                    </h3>
+
+                                    <ul class="list-unstyled fw-semibold mb-3">
+                                        <li>Seerat-e-Shakhsiyat</li>
+                                        <li>Ilmi o Deeni Khidmat</li>
+                                        <li>Talim o Tarbiyat</li>
+                                        <li>Fazail aur Karamaat</li>
+                                        <li>Muntashir Yaadein</li>
+                                      
+                                    </ul>
+
+                                    <p class="fw-semibold mb-1">Page : 104</p>
+                                    <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹170</span>
+  <span style="color: green; margin-left: 10px;">₹80</span>
+
+                                    <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                </div>
+                            </div>
+
+                            <!-- Right: Image -->
+                            <div class="col-md-6 order-1 order-md-2 text-center">
+                                <img src="assets/img/rasheed ahmed.png" alt="Hulye Mubarakah aur Malbusaate Nabviyya"
+                                    class="img-fluid rounded" style="max-width:350px;">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+ <div class="row gy-3 product-grid-section">
+                <div class="container mb-5">
+                    <div class="card p-3 shadow-sm border-0 rounded-4">
+                        <div class="row align-items-center">
+
+                            <!-- Left: Text / Contact -->
+                            <div class="col-md-6 order-2 order-md-1">
+                                <div class="content text-md-start text-center p-3">
+                                    <h3 class="fw-bold mb-3 text-success-emphasis">
+                                    Tazkirah Hazrat Maulana Qari Muhammad Rasheed Sahib Bazurg Simlakiؒ
+                                    </h3>
+
+                                    <ul class="list-unstyled fw-semibold mb-3">
+                                        <li>Seerat-e-Shakhsiyat</li>
+                                        <li>Ilmi o Deeni Khidmat</li>
+                                        <li>Talim o Tarbiyat</li>
+                                        <li>Fazail aur Karamaat</li>
+                                        <li>Unka Paigham</li>
+                                      
+                                    </ul>
+
+                                    <p class="fw-semibold mb-1">Page : 101</p>
+                                   <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹110</span>
+  <span style="color: green; margin-left: 10px;">₹60</span>
+                                    <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                </div>
+                            </div>
+
+                            <!-- Right: Image -->
+                            <div class="col-md-6 order-1 order-md-2 text-center">
+                                <img src="assets/img/tazkirah2.png" alt="Hulye Mubarakah aur Malbusaate Nabviyya"
+                                    class="img-fluid rounded" style="max-width:350px;">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+ <div class="row gy-3 product-grid-section">
+                <div class="container mb-5">
+                    <div class="card p-3 shadow-sm border-0 rounded-4">
+                        <div class="row align-items-center">
+
+                            <!-- Left: Text / Contact -->
+                            <div class="col-md-6 order-2 order-md-1">
+                                <div class="content text-md-start text-center p-3">
+                                    <h3 class="fw-bold mb-3 text-success-emphasis">
+                              Tazkirah Hazrat Maulana Rafi‘uddin Sahib Unwiؒ
+                                    </h3>
+
+                                    <ul class="list-unstyled fw-semibold mb-3">
+                                        <li>Seerat-e-Shakhsiyat</li>
+                                        <li>Ilmi o Deeni Khidmat</li>
+                                        <li>Talim o Tarbiyat</li>
+                                        <li>Fazail aur Karamaat</li>
+                                        <li>Unka Paigham</li>
+                                      
+                                    </ul>
+
+                                    <p class="fw-semibold mb-1">Page : 96</p>
+                                   <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹180</span>
+  <span style="color: green; margin-left: 10px;">₹100</span>
+
+                                    <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                </div>
+                            </div>
+
+                            <!-- Right: Image -->
+                            <div class="col-md-6 order-1 order-md-2 text-center">
+                                <img src="assets/img/tazkirah3.png" alt="Hulye Mubarakah aur Malbusaate Nabviyya"
+                                    class="img-fluid rounded" style="max-width:350px;">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row gy-3 product-grid-section">
+                        <div class="container mb-5">
+                            <div class="card p-3 shadow-sm border-0 rounded-4">
+                                <div class="row align-items-center">
+
+                                    <!-- Left: Text / Contact -->
+                                    <div class="col-md-6 order-2 order-md-1">
+                                        <div class="content text-md-start text-center p-3">
+                                            <h3 class="fw-bold mb-3 text-success-emphasis">
+                                                Badri Khazraji Sahabaؓ
+                                            </h3>
+
+                                            <ul class="list-unstyled fw-semibold mb-3">
+                                                <li>Seerat aur Shujaat.</li>
+                                                <li>Islam ke liye Qurbaniyan.</li>
+                                                <li>Aqaid aur Iman.</li>
+                                                <li>Talim aur Rehnumai.</li>
+                                                <li>Roohani Asraat.</li>
+                                            </ul>
+
+                                            <p class="fw-semibold mb-1">Page : 885</p>
+                                           <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹450</span>
+  <span style="color: green; margin-left: 10px;">₹300</span>
+
+                                           <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Right: Image -->
+                                    <div class="col-md-6 order-1 order-md-2 text-center">
+                                        <img src="assets/img/Badri Khazraji Sahaba (RZ) 1.png" alt="Madinah Munawwarah ki Ziyaraat"
+                                            class="img-fluid rounded" style="max-width:350px;">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+                    <div class="row gy-3 product-grid-section">
+                        <div class="container mb-5">
+                            <div class="card p-3 shadow-sm border-0 rounded-4">
+                                <div class="row align-items-center">
+
+                                    <!-- Left: Text / Contact -->
+                                    <div class="col-md-6 order-2 order-md-1">
+                                        <div class="content text-md-start text-center p-3">
+                                            <h3 class="fw-bold mb-3 text-success-emphasis">
+                                                Badri Ausi Sahabaؓ
+                                            </h3>
+
+                                            <ul class="list-unstyled fw-semibold mb-3">
+                                                <li>Seerat aur Shujaat.</li>
+                                                <li>Islam ke liye Qurbaniyan.</li>
+                                                <li>Aqaid aur Iman.</li>
+                                                <li>Talim aur Rehnumai.</li>
+                                                <li>Roohani Asraat.</li>
+                                            </ul>
+
+                                            <p class="fw-semibold mb-1">Page : 593</p>
+                                             <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹400</span>
+  <span style="color: green; margin-left: 10px;">₹250</span>
+
+
+                                           <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Right: Image -->
+                                    <div class="col-md-6 order-1 order-md-2 text-center">
+                                        <img src="assets/img/badri ausi.png" alt="Madinah Munawwarah ki Ziyaraat"
+                                            class="img-fluid rounded" style="max-width:350px;">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row gy-3 product-grid-section">
+                                <div class="container mb-5">
+                                    <div class="card p-3 shadow-sm border-0 rounded-4">
+                                        <div class="row align-items-center">
+
+                                            <!-- Left: Text / Contact -->
+                                            <div class="col-md-6 order-2 order-md-1">
+                                                <div class="content text-md-start text-center p-3">
+                                                    <h3 class="fw-bold mb-3 text-success-emphasis">
+                                                       Azaim – Badri Sahaba ke Qissay
+                                                    </h3>
+
+                                                    <ul class="list-unstyled fw-semibold mb-3">
+                                                        <li>Bahaduri aur Jazba</li>
+                                                        <li>Islam ke liye Qurbaniyan</li>
+                                                        <li>Imaan aur Tawakkul</li>
+                                                        <li>Talim aur Rehnumai</li>
+                                                        <li>Roohani Asraat</li>
+                                                    </ul>
+
+                                                    <p class="fw-semibold mb-1">Page : 100</p>
+                                                   <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹90</span>
+  <span style="color: green; margin-left: 10px;">₹40</span>
+
+                                                   <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                                </div>
+                                            </div>
+
+                                            <!-- Right: Image -->
+                                            <div class="col-md-6 order-1 order-md-2 text-center">
+                                                <img src="assets/img/aazaaim.png"
+                                                    alt="Hijaamay se muta‘alliq Chalees Ahadees"
+                                                    class="img-fluid rounded" style="max-width:350px;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    
+
+                                    <div class="row gy-3 product-grid-section">
+                                        <div class="container mb-5">
+                                            <div class="card p-3 shadow-sm border-0 rounded-4">
+                                                <div class="row align-items-center">
+
+                                                    <!-- Left: Text / Contact -->
+                                                    <div class="col-md-6 order-2 order-md-1">
+                                                        <div class="content text-md-start text-center p-3">
+                                                            <h3 class="fw-bold mb-3 text-success-emphasis">
+                                                             Azaim – Bayadgar Mohsin-e-Qaum wa Millat Hazrat Aqdas Maulana Ahmad Hasan Bham Simlaki
+                                                            </h3>
+
+                                                            <ul class="list-unstyled fw-semibold mb-3">
+                                                                <li>Naujawano ka Qadr.</li>
+                                                                <li>Qeemti Sarmaya.</li>
+                                                                <li>Taleem aur Dars.</li>
+                                                                <li>Namuna-e-Kirdar.</li>
+                                                                <li>Ahwaal-e-Sahaba.</li>
+                                                            </ul>
+
+                                                            <p class="fw-semibold mb-1">Page : 98</p>
+                                                           <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹90</span>
+  <span style="color: green; margin-left: 10px;">₹40</span>
+
+
+                                                          <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Right: Image -->
+                                                    <div class="col-md-6 order-1 order-md-2 text-center">
+                                                        <img src="assets/img/azaaim.png"
+                                                            alt="Maut hamesha ki zindagi ka darwaza"
+                                                            class="img-fluid rounded" style="max-width:350px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row gy-3 product-grid-section">
+                                                <div class="container mb-5">
+                                                    <div class="card p-3 shadow-sm border-0 rounded-4">
+                                                        <div class="row align-items-center">
+
+                                                            <!-- Left: Text / Contact -->
+                                                            <div class="col-md-6 order-2 order-md-1">
+                                                                <div class="content text-md-start text-center p-3">
+                                                                    <h3 class="fw-bold mb-3 text-success-emphasis">
+                                                                        A‘maal-e-Sadaqah (اعمالِ صدقہ)
+                                                                    </h3>
+
+                                                                    <ul class="list-unstyled fw-semibold mb-3">
+                                                                        <li>Ibaadaat</li>
+                                                                        <li>Akhlaaqiyaat</li>
+                                                                        <li>Mu‘aamalaat</li>
+                                                                        <li>Siyasiyaat</li>
+                                                                        <li>Ilm ki fazilat
+                                                                        </li>
+                                                                    </ul>
+
+                                                                    <p class="fw-semibold mb-1">Page :32</p>
+                                                                     <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹60</span>
+  <span style="color: green; margin-left: 10px;">₹40</span>
+
+                                                                   <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Right: Image -->
+                                                            <div class="col-md-6 order-1 order-md-2 text-center">
+                                                                <img src="assets/img/aamale sadqa.png"
+                                                                    alt="Ishq-e-Nabavi ﷺ ke Waqi‘aat"
+                                                                    class="img-fluid rounded" style="max-width:350px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row gy-3 product-grid-section">
+                                                        <div class="container mb-5">
+                                                            <div class="card p-3 shadow-sm border-0 rounded-4">
+                                                                <div class="row align-items-center">
+
+                                                                    <!-- Left: Text / Contact -->
+                                                                    <div class="col-md-6 order-2 order-md-1">
+                                                                        <div
+                                                                            class="content text-md-start text-center p-3">
+                                                                            <h3
+                                                                                class="fw-bold mb-3 text-success-emphasis">
+                                                                                Saal ke Teen Mausam
+                                                                            </h3>
+
+                                                                            <ul class="list-unstyled fw-semibold mb-3">
+                                                                                <li>Yeh apne mawzoo‘ par nihayat munfarid kitaab hai</li>
+                                                                                <li>Saal ke mukhtalif mausamon ke hawale se mukhtalif a‘maal aur ibadaat ka zikr</li>
+                                                                                <li>Is kitaab me a‘maal ko Qur’an-o-Sunnat ki roshni me wazeh kiya gaya hai
+                                                                                </li>
+                                                                                <li>Yeh kitaab “Mushk aan ast ke khud bubu-yaid” ka asal misaaq hai, yani kitaab apni ahmiyat khud bayan karti hai</li>
+                                                                         
+                                                                            </ul>
+
+                                                                            <p class="fw-semibold mb-1">Page : 418</p>
+                                                                             <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹280</span>
+  <span style="color: green; margin-left: 10px;">₹200</span>
+
+
+                                                                         <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Right: Image -->
+                                                                    <div
+                                                                        class="col-md-6 order-1 order-md-2 text-center">
+                                                                        <img src="assets/img/saal ke.png"
+                                                                            alt="Ghazwaat-e-Rasool ﷺ"
+                                                                            class="img-fluid rounded"
+                                                                            style="max-width:350px;">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row gy-3 product-grid-section">
+                                                                <div class="container mb-5">
+                                                                    <div class="card p-3 shadow-sm border-0 rounded-4">
+                                                                        <div class="row align-items-center">
+
+                                                                            <!-- Left: Text / Contact -->
+                                                                            <div class="col-md-6 order-2 order-md-1">
+                                                                                <div
+                                                                                    class="content text-md-start text-center p-3">
+                                                                                    <h3
+                                                                                        class="fw-bold mb-3 text-success-emphasis">
+                                                                                       Tahrik-e-Azadi aur Mujahid-ul-Islam Hazrat Maulana Muhammad Qasim Sahib Nanotviؒ
+                                                                                    </h3>
+
+                                                                                    <ul
+                                                                                        class="list-unstyled fw-semibold mb-3">
+                                                                                        <li>Is risale me Hazrat Maulana Muhammad Qasim Nanotviؒ ki hayat aur khidmaat ki jhalak pesh ki gayi hai</li>
+                                                                                        <li>Aap ke andar ka Sunnat par amal ka jazba wazeh kiya gaya hai.</li>
+                                                                                        <li>Jihad-e-Shamli ka pas-e-manzar bayan kiya gaya hai.</li>
+                                                                                        <li>Tahrik-e-Azadi ke doran aapke buland azaaim ko roshan kiya gaya hai.</li>
+                                                                                        <li>Aapki khidmaat aur kirdar ko ikattha kar ke talaba aur awaam ke samne rakha gaya hai.</li>
+                                                                                    </ul>
+
+                                                                                    <p class="fw-semibold mb-1">Page :
+                                                                                       64</p>
+                                                                                   <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹90</span>
+  <span style="color: green; margin-left: 10px;">₹60</span>
+
+                                                                                 <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- Right: Image -->
+                                                                            <div
+                                                                                class="col-md-6 order-1 order-md-2 text-center">
+                                                                                <img src="assets/img/tahreeke aazadi -.png"
+                                                                                    alt="Saraaya-e-Rasool ﷺ"
+                                                                                    class="img-fluid rounded"
+                                                                                    style="max-width:350px;">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row gy-3 product-grid-section">
+                                                                        <div class="container mb-5">
+                                                                            <div
+                                                                                class="card p-3 shadow-sm border-0 rounded-4">
+                                                                                <div class="row align-items-center">
+
+                                                                                    <!-- Left: Text / Contact -->
+                                                                                    <div
+                                                                                        class="col-md-6 order-2 order-md-1">
+                                                                                        <div
+                                                                                            class="content text-md-start text-center p-3">
+                                                                                            <h3
+                                                                                                class="fw-bold mb-3 text-success-emphasis">
+                                                                                              Rehmat-e-Do Aalam ﷺ ki Rehmaton ki Ek Jhalak
+                                                                                            </h3>
+
+                                                                                            <ul
+                                                                                                class="list-unstyled fw-semibold mb-3">
+                                                                                                <li>Nabi Kareem ﷺ ki har lamha-e-hayat rehmat se bhara hua hai.</li>
+                                                                                                <li>Aap ﷺ pichle anbiya ke liye bhi rehmat the.
+                                                                                                </li>
+                                                                                                <li>Aap ﷺ ki wafaat ke waqt aur wafaat ke baad, qabr-e-athar me bhi rehmat hai.</li>
+                                                                                                <li>Kuffar, janwaron aur tamam makhlooq ke liye bhi aap ﷺ rehmat ban kar aaye.</li>
+                                                                                                <li>Maidan-e-Hashr me bhi Nabi Kareem ﷺ ki rehmat zahir hogi.</li>
+                                                                                            </ul>
+
+                                                                                            <p class="fw-semibold mb-1">
+                                                                                                Page
+                                                                                                : 40</p>
+                                                                                            <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹110</span>
+  <span style="color: green; margin-left: 10px;">₹80</span>
+
+                                                                                        <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <!-- Right: Image -->
+                                                                                    <div
+                                                                                        class="col-md-6 order-1 order-md-2 text-center">
+                                                                                        <img src="assets/img/rahmataw ki jhalak.png"
+                                                                                            alt="Ramzan ke Roohani A‘maal (Urdu)"
+                                                                                            class="img-fluid rounded"
+                                                                                            style="max-width:350px;">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <div class="row gy-3 product-grid-section">
+                                                                                <div class="container mb-5">
+                                                                                    <div
+                                                                                        class="card p-3 shadow-sm border-0 rounded-4">
+                                                                                        <div
+                                                                                            class="row align-items-center">
+
+                                                                                            <!-- Left: Text / Contact -->
+                                                                                            <div
+                                                                                                class="col-md-6 order-2 order-md-1">
+                                                                                                <div
+                                                                                                    class="content text-md-start text-center p-3">
+                                                                                                    <h3
+                                                                                                        class="fw-bold mb-3 text-success-emphasis">
+                                                                                                       Gaahay Gaahay Baz Khaan
+                                                                                                    </h3>
+
+                                                                                                    <ul
+                                                                                                        class="list-unstyled fw-semibold mb-3">
+                                                                                                        <li>Ye kitaab asal me Hazrat Aqdas Maulana Noor Alam Khaleel Aminiؒ ki mashhoor kitaab “Min Wahy al-Khatir” ke chand mazameen ka Urdu tarjuma hai.
+                                                                                                        </li>
+                                                                                                        <li>Maulana Noor Alam Khaleel Aminiؒ ek be-misaal adib aur mujallāh “ad-Dā‘i” ke editor the.
+                                                                                                        </li>
+                                                                                                        <li>Ye kitaab khaas taur par tullaba aur ulama ke liye likhe gaye mazameen ka majmua hai.
+                                                                                                        </li>
+                                                                                                        <li>Is me adabiyat, fikr aur ilm ke umda rang urdu zubaan me paish kiye gaye hain.</li>
+                                                                                                       
+                                                                                                    </ul>
+
+                                                                                                    <p
+                                                                                                        class="fw-semibold mb-1">
+                                                                                                        Page : 104</p>
+                                                                                                       <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹180</span>
+  <span style="color: green; margin-left: 10px;">₹100</span>
+
+                                                                                                  <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <!-- Right: Image -->
+                                                                                            <div
+                                                                                                class="col-md-6 order-1 order-md-2 text-center">
+                                                                                                <img src="assets/img/gaayhe.png"
+                                                                                                    alt="Ramzan ke Roohani A‘maal (Gujarati)"
+                                                                                                    class="img-fluid rounded"
+                                                                                                    style="max-width:350px;">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div
+                                                                                        class="row gy-3 product-grid-section">
+                                                                                        <div class="container mb-5">
+                                                                                            <div
+                                                                                                class="card p-3 shadow-sm border-0 rounded-4">
+                                                                                                <div
+                                                                                                    class="row align-items-center">
+
+                                                                                                    <!-- Left: Text / Contact -->
+                                                                                                    <div
+                                                                                                        class="col-md-6 order-2 order-md-1">
+                                                                                                        <div
+                                                                                                            class="content text-md-start text-center p-3">
+                                                                                                            <h3
+                                                                                                                class="fw-bold mb-3 text-success-emphasis">
+                                                                                                                Ye Sheeshe Baadah Mazmoon Ke
+                                                                                                            </h3>
+
+                                                                                                            <ul
+                                                                                                                class="list-unstyled fw-semibold mb-3">
+                                                                                                                <li>Ye kitaab asal me musabaqati taqareer (competition speeches) ka majmua hai.
+                                                                                                                </li>
+                                                                                                                <li>Ye Jami‘ah Ta‘leemuddin Dabhel ke tullaba ke liye tayyar ki gayi hai.
+                                                                                                                </li>
+                                                                                                                <li>Is me bohot mufeed aur jami‘ rehnumai paish ki gayi hai.
+                                                                                                                </li>
+                                                                                                                <li>Hazrat Mufti Sahib ne apne ilmi zauq, jami‘ usloob aur gehri baseerat se isay tarteeb diya hai.
+                                                                                                                </li>
+                                                                                                                <li>Ye kitaab tullaba ko adabi aur ilmi taur par behtareen rahnumai faraham karti hai.
+                                                                                                                </li>
+                                                                                                            </ul>
+
+                                                                                                            <p
+                                                                                                                class="fw-semibold mb-1">
+                                                                                                                Page :
+                                                                                                                368
+                                                                                                             <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹350</span>
+  <span style="color: green; margin-left: 10px;">₹220</span>
+
+                                                                                                            <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <!-- Right: Image -->
+                                                                                                    <div
+                                                                                                        class="col-md-6 order-1 order-md-2 text-center">
+                                                                                                        <img src="assets/img/ye sheeshe.png"
+                                                                                                            alt="Al-Arba‘oon al-Makkiyyah"
+                                                                                                            class="img-fluid rounded"
+                                                                                                            style="max-width:350px;">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="row gy-3 product-grid-section">
+                                                                                                <div
+                                                                                                    class="container mb-5">
+                                                                                                    <div
+                                                                                                        class="card p-3 shadow-sm border-0 rounded-4">
+                                                                                                        <div
+                                                                                                            class="row align-items-center">
+
+                                                                                                            <!-- Left: Text / Contact -->
+                                                                                                            <div
+                                                                                                                class="col-md-6 order-2 order-md-1">
+                                                                                                                <div
+                                                                                                                    class="content text-md-start text-center p-3">
+                                                                                                                    <h3
+                                                                                                                        class="fw-bold mb-3 text-success-emphasis">
+                                                                                                                     ذو (Zu)
+                                                                                                                    </h3>
+
+                                                                                                                    <ul
+                                                                                                                        class="list-unstyled fw-semibold mb-3">
+                                                                                                                        <li>"ذو" se shuru hone wale mashhoor laqab-e-Sahaba
+                                                                                                                        </li>
+                                                                                                                        <li>(Zu al-Nurayn)
+                                                                                                                        </li>
+                                                                                                                        <li>(Zu al-Janāḥayn)
+                                                                                                                        </li>
+                                                                                                                        <li>(Zu al-Shimalain)
+                                                                                                                        </li>
+                                                                                                                        <li>(Zu al-Yadayn)</li>
+                                                                                                                    </ul>
+
+                                                                                                                    <p
+                                                                                                                        class="fw-semibold mb-1">
+                                                                                                                        Page
+                                                                                                                        :
+                                                                                                                        113
+                                                                                                                    </p>
+                                                                                                                    <p class="fw-semibold mb-1">
+  Qeemat : <span style="text-decoration: line-through; color: red;">₹200</span>
+  <span style="color: green; margin-left: 10px;">₹160</span>
+                                                                                                                 <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+    <a href="mailto:darattawheed2025@gmail.com?subject=Request%20for%20Book%20Purchase&body=Assalamualaikum%20Warahmatullahi%20Wabarakatuh,%0A%0AMain%20aapki%20kitab%20[Kitab%20ka%20Naam]%20kharidna%20chahata%20hoon.%0ABara-e-karam%20mujhe%20iske%20purchase%20ke%20liye%20tafseeli%20maloomat%20bhej%20dijiye.%0A%0AJazakAllahu%20Khair,%0A[Apka%20Naam]%0A[Apka%20Contact%20Number]" class="btn btn-success">
+        Contact Us
+    </a>
+    <a href="tel:+919510020806" class="btn btn-outline-primary">Call Now</a>
+</div>
+
+                                                                                                                </div>
+                                                                                                            </div>
+
+                                                                                                            <!-- Right: Image -->
+                                                                                                            <div
+                                                                                                                class="col-md-6 order-1 order-md-2 text-center">
+                                                                                                                <img src="assets/img/zu.png"
+                                                                                                                    alt="Al-Arba‘oon al-Madaniyyah"
+                                                                                                                    class="img-fluid rounded"
+                                                                                                                    style="max-width:350px;">
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+
+
+                                                                                                  
+
+    </section><!-- /Recent Posts Section -->
+
+
+
+    <footer id="footer" class="footer position-relative" style="background-color: #333; color: white;">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+
+                <!-- About Section -->
+                <div class="col-lg-5 col-md-12 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename" style="color: rgb(236, 213, 161);">DAR AT TAWHEED</span>
+                    </a>
+                    <p>
+                        Dar at Tawheed ek Islami markaz hai jo Qur’an, Hadees aur authentic Islami
+                        kitaabon ko chap kar aur brochures ke zariye logon tak pohchata hai.
+                        Hamara maqsad ilm, imaan aur hidayat ko aam karna hai.
+                    </p>
+                    <div class="social-links d-flex mt-4">
+                        <a href="https://www.facebook.com/share/178BNYaxsA/" target="_blank"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/dar_at_tawheed/?igsh=MXU2Y3Y2aWh5bWRvNQ%3D%3D#"
+                            target="_blank"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4 style="color: rgb(236, 213, 161);">Useful Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="contect.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4 style="color: rgb(236, 213, 161);">Contact Us</h4>
+                    <p>Dar at Tawheed</p>
+                    <p>Surat, Gujrat, India</p>
+                    <p class="mt-4"><strong>Phone:</strong> <span>+91 95100 20806</span></p>
+                    <p><strong>Email:</strong> <span>darattawheed2025@gmail.com</span></p>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-4 col-md-12 footer-newsletter">
+                    <h4 style="color: rgb(236, 213, 161);">Sign Up for Updates</h4>
+                    <form action="https://formspree.io/f/xblagedy" method="POST" class="signup-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit" style="color: rgb(47, 113, 112);">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="container copyright text-center mt-4">
+            <div class="credits">
+                Designed by <a href="https://abdulhaigawai.github.io/Abdulhaigawai-s-Professional-Profile/"
+                    style="color: rgb(47, 113, 112);" target="_blank">Abdul Hai Gawai</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script>
+        const items = document.querySelectorAll(".accordion-item");
+        items.forEach(item => {
+            item.addEventListener("click", () => {
+                items.forEach(i => i.classList.remove("active"));
+                item.classList.add("active");
+            });
+        });
+    </script>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

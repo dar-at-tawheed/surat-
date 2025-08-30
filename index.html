@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title> DAR AT TAWHEED</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png " rel="icon">
+  <link href=" " rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <style>
+    /* General Body Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    /* Default desktop menu */
+    /* Desktop menu */
+    .navmenu {
+      margin: 0 auto;
+      /* Center horizontally */
+    }
+
+    .navmenu ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      padding: 8px 12px;
+    }
+
+    /* Mobile menu */
+    @media (max-width: 1100px) {
+      .navmenu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .navmenu ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .navmenu.active {
+        display: block;
+      }
+
+      .mobile-nav-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        margin-left: auto;
+      }
+    }
+
+    /* Desktop: toggle hidden */
+    @media (min-width: 1100px) {
+      .mobile-nav-toggle {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .mobile-nav-toggle {
+        display: block;
+        position: relative;
+        z-index: 1100;
+        /* image ke upar rahe */
+        font-size: 28px;
+        cursor: pointer;
+        margin-left: auto;
+        /* right side pe push karega */
+        color: #000;
+        /* white bg pe black, dark bg pe white use karna */
+      }
+
+      .navmenu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        /* header ke neeche */
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 15px;
+        text-align: center;
+        z-index: 999;
+      }
+
+      .navmenu.active {
+        display: block;
+      }
+    }
+
+
+    /* ========== Base Header ========== */
+
+
+    /* Text Overlay for Video */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 50vw;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .text-overlay span {
+      display: block;
+      font-size: 2rem;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .text-overlay span:nth-child(2) {
+      color: #ff6600;
+    }
+
+    .text-overlay span:nth-child(3) {
+      color: #8b1ff0;
+      margin-left: 10px;
+    }
+
+
+    .main {
+      padding: 50px 0;
+    }
+
+    /* Carousel Styles */
+    .carousel-inner {
+      position: relative;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+
+    }
+
+    #bb {
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hero Section */
+    #cc {
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      animation: fadeIn 2s ease-in-out;
+      background-color: rgba(245, 245, 220, 0.568);
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+    }
+
+
+
+
+    #cc span {
+      margin-left: 10px;
+    }
+
+    #cc span:first-child {
+      color: aliceblue;
+      font-family: initial;
+    }
+
+    #cc span:nth-child(2) {
+      color: rgb(255, 102, 0);
+    }
+
+    #cc span:nth-child(3) {
+      color: rgb(139, 31, 240);
+    }
+
+    /* Stats Section */
+    #stats {
+      background-color: #111;
+      padding: 50px 0;
+    }
+
+    #stats img {
+      max-width: 100%;
+      border-radius: 15px;
+    }
+
+    #stats .container {
+      color: white;
+    }
+
+    #stats .text-center {
+      font-size: 18px;
+    }
+
+    #stats p {
+      font-size: 1.2em;
+      color: rgb(255, 102, 0);
+      margin-bottom: 20px;
+    }
+
+    #stats a button {
+      color: rgb(139, 31, 240);
+      background-color: rgb(255, 102, 0);
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bolder;
+      border-radius: 25px;
+      padding: 10px;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    #stats a button:hover {
+      background-color: rgb(139, 31, 240);
+      color: white;
+    }
+
+
+    /* Responsive Design */
+    @media screen and (max-width: 950px) {
+      #cc {
+        font-size: 30px;
+      }
+
+      #ww {
+        font-size: 25px;
+      }
+
+    }
+
+    /* Smooth scroll effect for navigation */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Carousel Controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+      filter: invert(100%);
+    }
+
+    /* Hover Effects for Buttons */
+    button:hover {
+      cursor: pointer;
+    }
+
+    .video-container {
+      position: relative;
+      background-size: cover;
+
+      margin: auto;
+    }
+
+    video {
+
+      background-size: cover;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+
+
+
+
+
+    .content1 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 40px;
+    }
+
+    .left {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .left img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      display: block;
+    }
+
+    .lefte img {
+      width: 500px;
+      max-width: 800px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      display: block;
+    }
+
+    .right {
+      flex: 1 1 500px;
+    }
+
+    .right h1 {
+      font-size: 48px;
+      color: rgb(64, 4, 121);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .right h3 {
+      font-size: 24px;
+      color: rgb(64, 4, 121);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .right p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      color: black;
+    }
+
+    /* ✅ Responsive for small screens (image first, text after, NO OVERLAP) */
+    @media (max-width: 768px) {
+
+      .content1 {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .left {
+        order: 1;
+        flex: 1 1 100%;
+      }
+
+      .left img {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
+
+      .right {
+        order: 2;
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      .right h1 {
+        font-size: 32px;
+      }
+
+      .right h3 {
+        font-size: 18px;
+      }
+
+      .right p {
+        font-size: 15px;
+      }
+    }
+
+
+    /* ======== DEFAULT FOR LARGE SCREENS (3 COLUMNS) ======== */
+    .locations {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      justify-content: center;
+      text-align: center;
+      justify-items: center;
+    }
+
+    .card {
+      background: rgb(206, 200, 212);
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: rgb(139, 31, 240);
+      border-bottom: 1px solid #fff;
+      padding-bottom: 5px;
+    }
+
+    .card p {
+      margin: 10px 0;
+      font-size: 0.95em;
+      color: #000000;
+      line-height: 1.4;
+    }
+
+    .card i {
+      margin-right: 8px;
+    }
+
+
+    /* ======== TABLET (2 COLUMNS) ======== */
+    @media (max-width: 992px) {
+      .locations {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+
+    /* ======== MOBILE (1 COLUMN) ======== */
+    @media (max-width: 576px) {
+      .locations {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        gap: 30px;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+
+
+    /* Responsive adjustments */
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Append
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+
+
+  <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo.png" alt="Dar at Tawheed" style="margin-left: 50PX;">
+      </a>
+
+      <!-- Mobile nav toggle -->
+      <div class="mobile-nav-toggle" id="mobile-toggle">☰</div>
+
+      <!-- Navbar -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="books.html"><span>Books</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="Brochures.html">Brochures</a></li>
+              <li><a href="Dar at Tawheed Publications.html">Dar at Tawheed Publications</a></li>
+              <li><a href="OtherBooks.html">Other Books</a></li>
+            </ul>
+          </li>
+          <li><a href="contect.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+  <div class="video-container">
+    <img src="assets/img/1 PHOTO.jpg" alt="" style="background-size: cover;width: 100%;">
+    <div class="text-overlay" id="ww" style="color: rgb(255, 255, 255); font-family: initial;"> DAR AT TAWHEED
+    </div>
+  </div>
+
+  <main class="main">
+
+    <!-- Stats Section -->
+    <section class="margin">
+      <div class="content1" class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="left">
+          <img src="assets/img/AREA.jpg" />
+        </div>
+        <div class="right"  >
+          <h1 style="color: rgb(47, 113, 112);">DAR AT TAWHEED</h1>
+          <h3 style="color: rgb(47, 113, 112);">ILM • IMAN • HIDAYA</h3>
+          <p>
+            Dar at Tawheed ek Islami markaz hai jahan taleem aur deen ki
+            kitaabein chap kar aur brochures ke zariye logon tak pohchayi
+            jaati hain. Hamara maqsad hai ke har shaks tak ilm aur hidayat
+            ki roshni asaan aur behtareen tareeqe se pohche.
+          </p>
+          <p>
+            Yahan aapko Dar at Tawheed ki apni publications ke saath-saath
+            doosri mufeed Islami kitaabein bhi milengi jo roohaniyat,
+            ibadat, aur insaniyat ke behtareen pehlu samjhati hain.
+          </p>
+          <p>
+            Humari koshish hai ke har ghar me sahi ilm aur authentic
+            kitaabein pohchein, taki har insaan apni zindagi ko deen ki
+            roshni se roshan kar sake.
+          </p>
+          <p>
+            Dar at Tawheed me chhapi hui zyadatar kitaabein
+            <strong>Shaikh Irfan Surti</strong> sahab ki likhi hui hoti hain,
+            jo apne asaan andaaz aur daleel ki buniyad par likhne ki wajah se
+            logon ke darmiyan bahut maqbool hain.
+          </p>
+
+        </div>
+      </div>
+    </section>
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" class="recent-posts section" style="background-color: rgb(206, 200, 212);">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: rgb(47, 113, 112)">BOOKS</h2>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- Brochures -->
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+              <div class="post-img">
+                <img src="assets/img/brochers.png" alt="Brochures" id="as" height="240px">
+              </div>
+              <h2 class="title"
+                style="font-size: 30px; margin-top: 20px; text-align: center; color: rgb(47, 113, 112);">
+                BROCHURES
+              </h2>
+              <div class="d-flex align-items-center">
+                <div class="post-meta">
+                  <p class="post-author" style=" text-align: center;">
+                    Dar at Tawheed ke brochures me mukhtalif islami mawzuaat par mukhtasar aur
+                    aasan maloomat shaamil hoti hai jo taleem aur tabligh ke liye behtareen zariya hai.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- End Brochures -->
+
+          <!-- Dar at Tawheed Publications -->
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article>
+              <div class="post-img">
+                <img src="assets/img/books.png" alt="Publications" id="as" height="240px">
+              </div>
+              <h2 class="title"
+                style="font-size: 30px; margin-top: 20px; text-align: center; color: rgb(47, 113, 112);">
+                OUR PUBLICATIONS
+              </h2>
+              <div class="d-flex align-items-center">
+                <div class="post-meta">
+                  <p class="post-author" style=" text-align: center;">
+                    Yahan Dar at Tawheed ki apni chapai hui kitaabein dastiyaab hain jo
+                    Qur’an, Hadees aur Islami taleemaat par mabni hain.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- End Publications -->
+
+          <!-- Other Books -->
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <article>
+              <div class="post-img">
+                <img src="assets/img/OTHER.png" alt="Other Books" id="as" height="240px">
+              </div>
+              <h2 class="title"
+                style="font-size: 30px; margin-top: 20px; text-align: center; color: rgb(47, 113, 112);">
+                OTHER PUBLICATIONS
+              </h2>
+              <div class="d-flex align-items-center">
+                <div class="post-meta">
+                  <p class="post-author" style=" text-align: center;">
+                    Is section me mukhtalif mufeed Islami kitaabein shaamil hain jo
+                    deen ki samajh aur roohani zindagi me rehnumai deti hain.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- End Other Books -->
+
+        </div><!-- End row -->
+      </div><!-- End container -->
+
+    </section>
+    <!-- Contact Section -->
+    <section id="recent-posts" class="recent-posts section" style="background-color:#f5e9db" class="card"
+      data-aos="fade-up" data-aos-delay="100">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: rgb(47, 113, 112);">OUR SERVICES</h2>
+      </div><!-- End Section Title -->
+      <div class="content1" class="card" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="right">
+          <h2 style="font-weight: bold;color: rgb(47, 113, 112);">Publication & Distribution</h2>
+
+          <p>
+            Dar at Tawheed ka maqsad hai ke asli aur mufeed Islami kitaabein har
+            ghar tak pohchein. Humari publications Qur’an, Hadees aur Islami taleemaat
+            par mabni hoti hain jo har umar ke logon ke liye samajhne me aasan aur
+            rooh ko sukoon dene wali hain.
+          </p>
+
+        </div>
+        <div class="left" data-aos="fade-up" data-aos-delay="100">
+          <img src="/assets/img/qq.jpg" />
+        </div>
+      </div>
+
+      <div class="content1" style=" margin-top: 50px;">
+        <div>
+          <div class="lefte" data-aos="fade-up" data-aos-delay="100">
+            <img src="/assets/img/aa.jpg" style="width: 100;" />
+          </div>
+        </div>
+        <div class="right" class="card" data-aos="fade-up" data-aos-delay="100">
+          <h2 style="font-weight: bold; color: rgb(47, 113, 112);">All India Courier Service</h2>
+
+          <p>
+            Har kitaab ki <strong>apni alag qeemat</strong> hoti hai jo uske mohtawa
+            aur size ke mutabiq hai. <br> Hum poore Bharat (All India) me apni kitaabein
+            <strong>Courier Service</strong> ke zariye aasaani se aapke ghar tak
+            pohcha dete hain. Jisko bhi kitaabein hasil karni ho,
+            wo humse <a href="contect.html" style="text-decoration: underline; color: rgb(61, 5, 114);">Contact</a>
+            karein.
+          </p>
+        </div>
+        <div>
+          <p style="font-weight: bold; color: rgb(139, 31, 240);">
+           
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+   <footer id="footer" class="footer position-relative" style="background-color: #333; color: white;">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      
+      <!-- About Section -->
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename" style="color: rgb(236, 213, 161);">DAR AT TAWHEED</span>
+        </a>
+        <p>
+          Dar at Tawheed ek Islami markaz hai jo Qur’an, Hadees aur authentic Islami 
+          kitaabon ko chap kar aur brochures ke zariye logon tak pohchata hai. 
+          Hamara maqsad ilm, imaan aur hidayat ko aam karna hai.
+        </p>
+        <div class="social-links d-flex mt-4">
+          <a href="https://www.facebook.com/share/178BNYaxsA/" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/dar_at_tawheed/?igsh=MXU2Y3Y2aWh5bWRvNQ%3D%3D#" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4 style="color: rgb(236, 213, 161);">Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="contect.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4 style="color: rgb(236, 213, 161);">Contact Us</h4>
+        <p>Dar at Tawheed</p>
+        <p>Surat, Gujrat, India</p>
+        <p class="mt-4"><strong>Phone:</strong> <span>+91 95100 20806</span></p>
+        <p><strong>Email:</strong> <span>darattawheed2025@gmail.com</span></p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-lg-4 col-md-12 footer-newsletter">
+        <h4 style="color: rgb(236, 213, 161);">Sign Up for Updates</h4>
+        <form action="https://formspree.io/f/xblagedy" method="POST" class="signup-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <button type="submit" style="color: rgb(47, 113, 112);">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="container copyright text-center mt-4">
+    <div class="credits">
+      Designed by <a href="https://abdulhaigawai.github.io/Abdulhaigawai-s-Professional-Profile/" style="color: rgb(47, 113, 112);" target="_blank">Abdul Hai Gawai</a>
+    </div>
+  </div>
+
+</footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById("mobile-toggle");
+      const nav = document.getElementById("navmenu");
+
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    });
+  </script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
