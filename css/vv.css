@@ -1,0 +1,150 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+#header {
+  background-color: #333; /* Dark gray background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures navbar stays on top */
+  padding: 10px 0; /* Padding for better spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
+}
+
+/* Logo Styles */
+#header .logo img {
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 100%;
+}
+
+/* Navigation Menu Styles */
+#navmenu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#navmenu ul li {
+  margin-left: 20px;
+}
+
+#navmenu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#navmenu ul li a:hover,
+#navmenu ul li a.active {
+  background-color: #ff6600; /* Highlight color on hover */
+  color: white;
+}
+
+/* Dropdown Styles */
+#navmenu ul li.dropdown:hover > ul {
+  display: block;
+}
+
+#navmenu ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  padding: 10px 0;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#navmenu ul li ul li a {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  #header .logo img {
+    min-width: 120px; /* Make logo smaller on mobile */
+    min-height: 60px;
+  }
+
+  #navmenu {
+    display: none; /* Hide nav menu initially on mobile */
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+  }
+
+  #navmenu ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  #navmenu ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  #navmenu ul li a {
+    font-size: 20px;
+    padding: 15px 20px;
+    display: block;
+  }
+
+  #navmenu ul.show {
+    display: block; /* Show menu when toggled */
+  }
+
+  /* Mobile Dropdown */
+  #navmenu ul li.dropdown > a::after {
+    content: " ▼";
+  }
+
+  #navmenu ul li.dropdown.open > ul {
+    display: block;
+  }
+
+  #navmenu ul li.dropdown ul li a {
+    padding: 12px 20px;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+/* Mobile Navbar Icon Styling */
+.mobile-nav-toggle {
+  display: none; /* Hidden by default, only visible on mobile */
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Text Overlay for Video */
